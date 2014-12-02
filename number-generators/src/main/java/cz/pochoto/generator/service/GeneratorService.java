@@ -1,5 +1,10 @@
 package cz.pochoto.generator.service;
 
-public interface GeneratorService {
+import java.util.List;
 
+public interface GeneratorService {
+	
+	public String getGeneratorName();
+	
+	public List<Double> getResults(Integer count, Integer seed);
 }
