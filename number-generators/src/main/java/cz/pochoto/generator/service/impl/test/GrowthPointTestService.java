@@ -48,12 +48,12 @@ public class GrowthPointTestService extends AbstractTestServiceImpl {
 		final Boolean h0Rejected = Math.abs(ubig) > u;
 
 		List<TestParam> output = new ArrayList<TestParam>();
-		output.add(new TestParam("U", u.toString()));
+		output.add(new TestParam("u", u.toString()));
 		output.add(new TestParam("N", n.toString()));
-		output.add(new TestParam("UBig", ubig.toString()));
-		output.add(new TestParam("C", c.toString()));
-		output.add(new TestParam("EC", ec.toString()));
-		output.add(new TestParam("DC", dc.toString()));
+		output.add(new TestParam("U", ubig.toString()));
+		output.add(new TestParam("P", c.toString()));
+		output.add(new TestParam("E(P)", ec.toString()));
+		output.add(new TestParam("D(P)", dc.toString()));
 		String points = "[";
 		for (Integer i : growthPoints) {
 			points = points + i.toString() + ",";

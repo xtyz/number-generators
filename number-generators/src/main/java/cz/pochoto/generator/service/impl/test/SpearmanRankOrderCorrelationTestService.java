@@ -52,7 +52,6 @@ public class SpearmanRankOrderCorrelationTestService extends
 		final Double uArg = 1 - (input.getAlpha() / 2);
 
 		// Count u
-		// Count u
 		Double u;
 		TDistribution tDist = new TDistribution(orderedByIndex.size());
 		u = tDist.inverseCumulativeProbability(uArg);
@@ -64,12 +63,6 @@ public class SpearmanRankOrderCorrelationTestService extends
 		output.add(new TestParam("US", us.toString()));
 		output.add(new TestParam("U", u.toString()));
 		output.add(new TestParam("N", n.toString()));
-		String points = "[";
-		for (Double i : dPowTwos) {
-			points = points + i.toString() + ",";
-		}
-		points = points + "]";
-		output.add(new TestParam("dPowTwos", points));
 		output.add(new TestParam("Zamítá se", h0Rejected.toString()));
 
 		return output;

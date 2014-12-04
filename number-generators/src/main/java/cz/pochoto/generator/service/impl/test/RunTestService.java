@@ -38,7 +38,7 @@ public class RunTestService extends AbstractTestServiceImpl {
 
 		Integer r = 0;
 		final List<Integer> packets = new ArrayList<Integer>(n);
-		packets.add(0); // First value is always 0
+		packets.add(0);
 		for (int i = 1; i < n; i++) {
 
 			final Integer valuePre = runPoints.get(i - 1);
@@ -73,8 +73,8 @@ public class RunTestService extends AbstractTestServiceImpl {
 		final Boolean h0Rejected = Math.abs(ubig) > u;
 
 		List<TestParam> output = new ArrayList<TestParam>();
-		output.add(new TestParam("SUM", sum.toString()));
-		output.add(new TestParam("XP", xp.toString()));
+		output.add(new TestParam("suma", sum.toString()));
+		output.add(new TestParam("prùmìr", xp.toString()));
 		output.add(new TestParam("R", r.toString()));
 		String points = "[";
 		for (Integer i : runPoints) {
@@ -90,11 +90,11 @@ public class RunTestService extends AbstractTestServiceImpl {
 		output.add(new TestParam("Balíky", points));
 		output.add(new TestParam("N1", n1.toString()));
 		output.add(new TestParam("N0", n0.toString()));
-		output.add(new TestParam("U", u.toString()));
+		output.add(new TestParam("u", u.toString()));
 		output.add(new TestParam("N", n.toString()));
-		output.add(new TestParam("UBig", ubig.toString()));
-		output.add(new TestParam("ER", er.toString()));
-		output.add(new TestParam("DR", dr.toString()));
+		output.add(new TestParam("U", ubig.toString()));
+		output.add(new TestParam("E(R)", er.toString()));
+		output.add(new TestParam("D(R)", dr.toString()));
 		output.add(new TestParam("Zamítá se", h0Rejected.toString()));
 
 		return output;

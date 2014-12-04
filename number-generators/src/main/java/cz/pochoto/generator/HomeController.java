@@ -84,7 +84,6 @@ public class HomeController {
 			@ModelAttribute("generator") GeneratorCommand generator,
 			@RequestParam(value = "type") int type) {
 
-		System.out.println("zde");
 		switch (type) {
 		case 1:
 			results = gaussianJavaGeneratorService.getResults(
